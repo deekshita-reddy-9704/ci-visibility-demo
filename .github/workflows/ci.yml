@@ -1,0 +1,20 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Quick passing check
+        run: |
+          echo "Running simple CI check"
+          # This is a minimal passing job. Replace with your real tests later.
+          echo "OK"
